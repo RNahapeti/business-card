@@ -75,7 +75,7 @@ p {
 }
 
 :root {
---bimage1: linear-gradient(to right, #d8e1e700 5%, #e7eef3 96%);
+--bimage1: linear-gradient(to right, #ffb803 5%, #e7eef3 96%);
 --bimage2: linear-gradient(to bottom, #ffb803 0%, #fb8600 68%);
 }
 
@@ -107,8 +107,8 @@ p {
 
 @keyframes progressBeam {
     0% {width: 0;}
-    20% {opacity: 1;}
+    10% {opacity: 1;}
     70% {width: 79%;}
-    75% {opacity: 0}
+    80% {opacity: 0}
     100% {opacity: 0;}
 }
