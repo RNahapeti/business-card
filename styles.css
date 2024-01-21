@@ -8,8 +8,19 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.img-border {
+    background: #0230473e;
+    width: 164px;
+    height: 164px;
+    border-radius: 6px;
+    box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.5), 1px 2px 2px rgba(255, 255, 255, 0.4);
+}
+
 .avatar {
     width: 150px;
+    border-radius: 4px;
+    margin-top: 7px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .7);
 }
 
 .card {
@@ -17,7 +28,9 @@ body {
     margin: 0 auto;
     padding: 20px;
     display: flex;
+    gap: 10px;
     justify-content: space-around;
+    align-items: center;
     text-align: center;
     background: #8ecae6;
     color: #2b2839;
@@ -42,28 +55,60 @@ body {
     transform: translateY(-3px) translateX(-1px);
 }
 
-img {
-    border-radius: 3px;
-}
-
 .border-blue {
     border: 1px dotted blue;
 }
 
-/*
-Stretch goals:
-Find other ways you can personalize 
-the design of your business card, e.g.:
-- change the border(s)
-- add border radius
-- shuffle the layout
-- shadows        🤯
-- hover effects  🤯🤯
-- animations     🤯🤯🤯
-*/
+p {
+    margin: 8px 0;
+}
 
-/*
-Final challenge:
-Download the code to your local computer and place it
-in a folder called "business-card"
-*/
+.bar-container {
+    position: relative;
+    width: 180px;
+    height: 14px;
+    padding: 5px;
+    background: #0230473e;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.5), 1px 2px 2px rgba(255, 255, 255, 0.4);
+}
+
+:root {
+--bimage1: linear-gradient(to right, #d8e1e700 5%, #e7eef3 96%);
+--bimage2: linear-gradient(to bottom, #ffb803 0%, #fb8600 68%);
+}
+
+.fill-up {
+    position: absolute;
+    height: 14px;
+    border-radius: 4px;
+    width: 79%;
+    background-image: var(--bimage2);
+    animation: progressFill 3s infinite;
+}
+
+@keyframes progressFill {
+    0% {width: 0;}
+    70% {width: 79%}
+    75% {opacity: 1}
+    85% {opacity: 0}
+    100% {opacity: 0}
+}
+
+.beam {
+    position: absolute;
+    height: 14px;
+    border-radius: 4px;
+    width: 79%;
+    background-image: var(--bimage1);
+    animation: progressBeam 3s infinite;
+}
+
+@keyframes progressBeam {
+    0% {width: 0;}
+    20% {opacity: 1;}
+    70% {width: 79%;}
+    75% {opacity: 0}
+    100% {opacity: 0;}
+}
